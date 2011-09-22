@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<metadata>
+  <version>1000</version>
+    <dependencies>
+        <dependency>profile-plone.app.caching:default</dependency>
+        <dependency>profile-jyu.z3cform.datepicker:default</dependency>
+        <dependency>profile-collective.indexing:default</dependency>
+        <dependency>profile-avrc.cfar.theme:default</dependency>
+        <dependency>profile-plone.app.intid:default</dependency>
+        <dependency>profile-avrc.cfar.coreservice:default</dependency>
+        <dependency>profile-avrc.cfar.masterbook:default</dependency>
+        <dependency>profile-avrc.cfar.grant:default</dependency>
+        <dependency>profile-plone.app.intid:default</dependency>
+        <dependency>profile-webcouturier.dropdownmenu:default</dependency>
+        <dependency>profile-plone.app.ldap:default</dependency>
+        <dependency>profile-Products.PloneFormGen:default</dependency>
+        <dependency>profile-plone.session:default</dependency>
+    </dependencies>
+</metadata>
