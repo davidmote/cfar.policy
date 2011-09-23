@@ -19,14 +19,16 @@ setup(name='cfar.policy',
       author_email='',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
-      packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['cfar'],
+      packages=find_packages('src', exclude=['ez_setup']),
       package_dir={'':'src'},
+      namespace_packages=['cfar'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
           'Plone',
+          'PIL',
+          'five.grok',
           'avrc.cfar.theme',
           'collective.uploadify',
           'collective.indexing',
@@ -35,11 +37,13 @@ setup(name='cfar.policy',
           'avrc.cfar.coreservice',
           'avrc.cfar.masterbook',
           'avrc.cfar.grant',
-          'webcouturier.dropdownmenu',
           'plone.app.ldap',
           'Products.PloneFormGen'
           # -*- Extra requirements: -*-
       ],
+    extras_require=dict(
+        test=['plone.app.testing'],
+        ),
       entry_points="""
       # -*- Entry points: -*-
 

@@ -1,55 +1,55 @@
-import unittest
+import unittest2 as unittest
+from cfar.policy.testing import CFAR_POLICY_INTEGRATION_TESTING
+from plone.app.testing import applyProfile
 
-#from zope.testing import doctestunit
-#from zope.component import testing
-from Testing import ZopeTestCase as ztc
+from Products.CMFCore.utils import getToolByName
 
-from Products.Five import fiveconfigure
-from Products.PloneTestCase import PloneTestCase as ptc
-from Products.PloneTestCase.layer import PloneSite
-ptc.setupPloneSite()
+class TestSetup(unittest.TestCase):
+    
+    layer = CFAR_POLICY_INTEGRATION_TESTING
 
-import leadtheway.policy
+    def test_theme_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('avrc.cfar.theme'))        
 
+    def test_indexing_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('collective.indexing'))        
 
-class TestCase(ptc.PloneTestCase):
-
-    class layer(PloneSite):
-
-        @classmethod
-        def setUp(cls):
-            fiveconfigure.debug_mode = True
-            ztc.installPackage(leadtheway.policy)
-            fiveconfigure.debug_mode = False
-
-        @classmethod
-        def tearDown(cls):
-            pass
+    def test_datepicker_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('jyu.z3cform.datepicker'))     
 
 
-def test_suite():
-    return unittest.TestSuite([
+    def test_caching_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('plone.app.caching'))   
 
-        # Unit tests
-        #doctestunit.DocFileSuite(
-        #    'README.txt', package='leadtheway.policy',
-        #    setUp=testing.setUp, tearDown=testing.tearDown),
+    def test_theme_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('avrc.cfar.theme'))
 
-        #doctestunit.DocTestSuite(
-        #    module='leadtheway.policy.mymodule',
-        #    setUp=testing.setUp, tearDown=testing.tearDown),
+    def test_coreservice_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('avrc.cfar.coreservice'))   
 
+    def test_masterbook_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('avrc.cfar.masterbook'))
 
-        # Integration tests that use PloneTestCase
-        #ztc.ZopeDocFileSuite(
-        #    'README.txt', package='leadtheway.policy',
-        #    test_class=TestCase),
+    def test_grant_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('avrc.cfar.grant'))   
 
-        #ztc.FunctionalDocFileSuite(
-        #    'browser.txt', package='leadtheway.policy',
-        #    test_class=TestCase),
-
-        ])
-
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')
+    def test_ldap_installed(self):
+        portal = self.layer['portal']
+        quickinstaller = getToolByName(portal, 'portal_quickinstaller')
+        self.assertTrue(quickinstaller.isProductInstalled('plone.app.ldap')) 
