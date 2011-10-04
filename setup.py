@@ -6,10 +6,10 @@ version = '0.1.0'
 setup(
     name='cfar.policy',
     version=version,
-    description="The collection of products required for the CFAR website",
+    description='The collection of products required for the CFAR website',
     classifiers=[
-        "Framework :: Plone",
-        "Programming Language :: Python",
+        'Framework :: Plone',
+        'Programming Language :: Python',
         ],
     keywords='',
     author='BEAST Core Development Team',
@@ -27,8 +27,9 @@ setup(
         'PIL',
         'collective.uploadify',
         'collective.indexing',
-        'five.grok',
         'jyu.z3cform.datepicker',
+        'plone.app.caching',
+        'plone.app.intid',
         'plone.app.ldap',
         'Products.PloneFormGen',
 
