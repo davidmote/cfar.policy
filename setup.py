@@ -24,7 +24,7 @@ setup(
     install_requires=[
         'setuptools',
         'Plone',
-        'PIL',
+        'Pillow',
         'collective.uploadify',
         'collective.indexing',
         'jyu.z3cform.datepicker',
@@ -32,7 +32,7 @@ setup(
         'plone.app.intid',
         'plone.app.ldap',
         'Products.PloneFormGen',
-
+        'beast.securelogin',
         'avrc.cfar.coreservice',
         'avrc.cfar.grant',
         'avrc.cfar.masterbook',
