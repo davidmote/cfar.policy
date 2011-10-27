@@ -9,9 +9,9 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="cfar.policy"
+      title="CFAR Site Policy"
       directory="profiles/default"
-      description="Installs the cfar.policy package"
+      description="Installs the CFAR Site policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
