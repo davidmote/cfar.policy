@@ -37,6 +37,7 @@ setup(
         'avrc.cfar.grant',
         'avrc.cfar.masterbook',
         'avrc.cfar.theme',
+        'collective.recaptcha'
         ],
     extras_require=dict(
         test=['plone.app.testing'],
