@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1.1'
+version = '0.1.2'
 
 setup(
     name='cfar.policy',
@@ -37,7 +37,9 @@ setup(
         'avrc.cfar.grant',
         'avrc.cfar.masterbook',
         'avrc.cfar.theme',
-        'collective.recaptcha'
+        'collective.recaptcha',
+        'collective.portlet.calendar',
+        'z3c.jbot'
         ],
     extras_require=dict(
         test=['plone.app.testing'],
