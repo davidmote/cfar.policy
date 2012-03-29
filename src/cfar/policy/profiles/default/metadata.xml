@@ -12,5 +12,6 @@
     <dependency>profile-plone.app.intid:default</dependency>
     <dependency>profile-beast.securelogin:default</dependency>
     <dependency>profile-plone.app.ldap:ldap</dependency>
+    <dependency>profile-collective.portlet.calendar:default</dependency>
   </dependencies>
 </metadata>
