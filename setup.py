@@ -38,7 +38,8 @@ setup(
         'avrc.cfar.masterbook',
         'avrc.cfar.theme',
         'collective.recaptcha',
-        'collective.portlet.calendar'
+        'collective.portlet.calendar',
+        'z3c.jbot'
         ],
     extras_require=dict(
         test=['plone.app.testing'],
