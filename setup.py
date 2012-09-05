@@ -34,6 +34,7 @@ setup(
         'Products.PloneFormGen',
         'beast.securelogin',
         'avrc.cfar.coreservice',
+        'cfar.coreservice',
         'avrc.cfar.grant',
         'avrc.cfar.masterbook',
         'avrc.cfar.theme',
