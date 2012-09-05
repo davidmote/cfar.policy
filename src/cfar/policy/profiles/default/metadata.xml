@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>000</version>
+  <version>002</version>
   <dependencies>
     <dependency>profile-avrc.cfar.coreservice:default</dependency>
+    <dependency>profile-cfar.coreservice:default</dependency>
     <dependency>profile-avrc.cfar.grant:default</dependency>
     <dependency>profile-avrc.cfar.masterbook:default</dependency>
     <dependency>profile-avrc.cfar.theme:default</dependency>
